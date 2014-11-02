@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "description": "API for controlling GoPro Hero 4 cameras",
     "directories": {
-        "lib", "./lib"
+        "lib": "./lib"
     },
     "main": "./lib/index.js",
     "scripts": {
