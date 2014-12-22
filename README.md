@@ -93,6 +93,26 @@ cam.mode(GoPro.Settings.Modes.Video, GoPro.Settings.Submodes.Video.Video).then(f
 });
 ```
 
+### Download last media
+
+```js
+var cam = new GoPro.Camera();
+cam.listMedia().then(function (result) {
+
+    var lastDir = result.media[result.media.length-1];
+    console.log("[last dir] = ", lastDir.d);
+    var lastMedia = lastDir.fs[lastDir.fs.length-1];
+    console.log("[last media] = ", lastMedia);
+    var name = lastMedia.n; /* filename */
+    var url = 'http://' + cam._ip + '/videos/DCIM/' + lastDir.d + '/' + name;
+    console.log('[url] = ', url);
+    cam.getMedia(url, __dirname)
+        .then(function (file) {console.log('[media downloaded]', file);})
+        .catch(function (err) {console.log('[media download error]', err); });
+
+});
+```
+
 ### Settings
 
 All the camera settings can be found in [lib/constant.js](lib/constant.js).
