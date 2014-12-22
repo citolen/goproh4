@@ -26,6 +26,13 @@
     "request": ">=2.47.0"
   },
   "author": "Nils Citoleux <nils.citoleux@gmail.com> (https://github.com/citolen)",
+  "contributors":[
+	{
+		"name":"Vladimir Seregin",
+		"email":"mail@peko.me",
+		"url":"https://github.com/peko"
+	}
+  ],
   "license": {
     "type": "MIT",
     "url": "https://github.com/citolen/goproh4/blob/master/LICENSE"
