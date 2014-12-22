@@ -2,6 +2,8 @@
 
 * https://gist.github.com/KonradIT
 * https://github.com/citolen/goproh4/blob/master/lib/index.js
+* http://goprouser.freeforums.org/hd4-to-app-pairing-has-changed-t20381.html
+* https://gist.github.com/rulkens/21372e829aceb0dff7c3
 
 #HERO4 Black Wifi hacking, ep 1
 
