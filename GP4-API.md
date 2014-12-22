@@ -100,6 +100,8 @@ URL for streaming: http://10.5.5.9/gp/gpExec?p1=gpTsFeeder&a1=%22%22&c1=restart&
 
 ###Firmware studies
 
+*seems like prefix must be http://10.5.5.9/gp/gpControl/command/... !*
+
 * ID: GPCAMERA_SHUTTER, Name: Start or stop capture, URL: http://10.5.5.9/command/shutter
 * ID: GPCAMERA_XMODE, Name: Set Mode and Sub-Mode, URL: http://10.5.5.9/command/xmode
 * ID: GPCAMERA_MODE, Name: Set Mode, URL: http://10.5.5.9/command/mode
