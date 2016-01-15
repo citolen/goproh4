@@ -3,17 +3,13 @@ var GoPro = require('../lib/index.js');
 var cam = new GoPro.Camera();
 
 
-/*
-**  Turn the camera off
-*/
+// Turn the camera off
+cam.powerOff()
 
-cam.powerOff().then(function () {
+// Wait 8s
+.delay(8000)
 
-    /*
-    **  Turn it back on after 8s
-    */
-
-    setTimeout(function () {
-        cam.powerOn();
-    }, 8000);
+// Turn the camera on
+.then(function () {
+    return cam.powerOn()
 });

@@ -21,7 +21,7 @@ cam.listMedia().then(function (result) {
         directory.fs.forEach(function (file) {
 
             var dateTaken = new Date(file.mod * 1000); /* x1000 timestamp unix > timestamp ms */
-            var size = file.s / 1000000; /* octet to mo */
+            var size = file.s / 1000000; /* byte to mb */
             var name = file.n; /* filename */
 
             if (file.g !== undefined) { // burst
