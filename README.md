@@ -9,24 +9,32 @@ var GoPro = require('goproh4');
 
 var cam = new GoPro.Camera();
 
-cam.mode(GoPro.Settings.Modes.Video, GoPro.Settings.Submodes.Video.Video).then(function () {
+// Set camera mode
+cam.mode(GoPro.Settings.Modes.Video, GoPro.Settings.Submodes.Video.Video)
 
-    cam.set(GoPro.Settings.VIDEO_RESOLUTION, GoPro.Settings.VideoResolution.R1080S).then(function () {
+// Set camera resolution
+.then(function () {
+    return cam.set(GoPro.Settings.VIDEO_RESOLUTION, GoPro.Settings.VideoResolution.R1080S)
+})
 
-        cam.set(GoPro.Settings.VIDEO_FPS, GoPro.Settings.VideoFPS.F60).then(function () {
+// Set camera framerate
+.then(function () {
+    return cam.set(GoPro.Settings.VIDEO_FPS, GoPro.Settings.VideoFPS.F60)
+})
 
-            cam.start().then(function () {
-            
-                console.log('[video recording] = start');
-                setTimeout(function () {
-                
-                    cam.stop().then(function () {
-                        console.log('[video recording] = stop');
-                    });
-                }, 10000);
-            });
-        });
-    });
+// Begin recording
+.then(function () {
+    console.log('[video]', 'started')
+    return cam.start()
+})
+
+// Wait 10s
+.delay(10000)
+
+// Stop recording
+.then(function () {
+    console.log('[video]', 'stopped')
+    return cam.stop()
 });
 
 ```
@@ -71,45 +79,32 @@ var cam = new GoPro.Camera({
 
 ### Record a video
 ```js
-/* Set video mode */
-cam.mode(GoPro.Settings.Modes.Video, GoPro.Settings.Submodes.Video.Video).then(function () {
-    /* Set video resolution */
-    cam.set(GoPro.Settings.VIDEO_RESOLUTION, GoPro.Settings.VideoResolution.R1080S).then(function () {
-        /* Set video framerate */
-        cam.set(GoPro.Settings.VIDEO_FPS, GoPro.Settings.VideoFPS.F60).then(function () {
-            /* start recording */
-            cam.start().then(function () {
-            
-                console.log('[video recording] = start');
-                setTimeout(function () {
-                    /* Stop recording after 10s */
-                    cam.stop().then(function () {
-                        console.log('[video recording] = stop');
-                    });
-                }, 10000);
-            });
-        });
-    });
-});
-```
+// Set camera mode
+cam.mode(GoPro.Settings.Modes.Video, GoPro.Settings.Submodes.Video.Video)
 
-### Download last media
+// Set camera resolution
+.then(function () {
+    return cam.set(GoPro.Settings.VIDEO_RESOLUTION, GoPro.Settings.VideoResolution.R1080S)
+})
 
-```js
-var cam = new GoPro.Camera();
-cam.listMedia().then(function (result) {
+// Set camera framerate
+.then(function () {
+    return cam.set(GoPro.Settings.VIDEO_FPS, GoPro.Settings.VideoFPS.F60)
+})
 
-    var lastDir = result.media[result.media.length-1];
-    console.log("[last dir] = ", lastDir.d);
-    var lastMedia = lastDir.fs[lastDir.fs.length-1];
-    console.log("[last media] = ", lastMedia);
-    var name = lastMedia.n; /* filename */
-    var url = 'http://' + cam._ip + '/videos/DCIM/' + lastDir.d + '/' + name;
-    console.log('[url] = ', url);
-    cam.getMedia(url, __dirname)
-        .then(function (file) {console.log('[media downloaded]', file);})
-        .catch(function (err) {console.log('[media download error]', err); });
+// Begin recording
+.then(function () {
+    console.log('[video]', 'started')
+    return cam.start()
+})
 
+// Wait 10s
+.delay(10000)
+
+// Stop recording
+.then(function () {
+    console.log('[video]', 'stopped')
+    return cam.stop()
 });
 ```
 
@@ -169,9 +164,3 @@ cam.status(GoPro.Status.InternalBatteryLevel).then(function (status_value) {
 ## Examples
 
 Go to [examples](examples) for more
-
-## Improvement
-
-The goal would be to connect more than one gopro on the same network like the remote, if I get an hand on it I will try to reverse it.
-
-### Have fun !
