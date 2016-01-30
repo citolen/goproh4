@@ -1,44 +1,49 @@
 {
-  "name": "goproh4",
-  "version": "0.3.1",
-  "description": "API for controlling GoPro Hero 4 cameras",
-  "directories": {
-    "lib": "./lib"
-  },
-  "main": "./lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/citolen/goproh4.git"
-  },
-  "keywords": [
-    "gopro",
-    "hero",
-    "camera",
-    "api",
-    "remote",
-    "4"
-  ],
-  "dependencies": {
-    "when": ">=3.5.1",
-    "request": ">=2.47.0"
-  },
-  "author": "Nils Citoleux <nils.citoleux@gmail.com> (https://github.com/citolen)",
-  "contributors":[
-	{
-		"name":"Vladimir Seregin",
-		"email":"mail@peko.me",
-		"url":"https://github.com/peko"
-	}
-  ],
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/citolen/goproh4/blob/master/LICENSE"
-  },
-  "bugs": {
-    "url": "https://github.com/citolen/goproh4/issues"
-  },
-  "homepage": "https://github.com/citolen/goproh4"
+    "name": "goproh4",
+    "version": "0.3.1",
+    "description": "API for controlling GoPro Hero 4 cameras",
+    "directories": {
+        "lib": "./lib"
+    },
+    "main": "./lib/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/citolen/goproh4.git"
+    },
+    "keywords": [
+        "gopro",
+        "hero",
+        "camera",
+        "api",
+        "remote",
+        "4"
+    ],
+    "dependencies": {
+        "when": ">=3.5.1",
+        "request": ">=2.47.0"
+    },
+    "author": "Nils Citoleux <nils.citoleux@gmail.com> (https://github.com/citolen)",
+    "contributors":[
+        {
+            "name":"Vladimir Seregin",
+            "email":"mail@peko.me",
+            "url":"https://github.com/peko"
+        },
+        {
+            "name":"Jeff Gladchun",
+            "email":"jeffgladchun@gmail.com",
+            "url":"https://github.com/jgladch"
+        }
+    ],
+    "license": {
+        "type": "MIT",
+        "url": "https://github.com/citolen/goproh4/blob/master/LICENSE"
+    },
+    "bugs": {
+        "url": "https://github.com/citolen/goproh4/issues"
+    },
+    "homepage": "https://github.com/citolen/goproh4"
 }
