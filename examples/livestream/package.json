@@ -1,0 +1,22 @@
+{
+  "name": "livestream",
+  "version": "1.0.0",
+  "description": "GoPro H4 livestream example",
+  "main": "livestream.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gopro",
+    "h4",
+    "live",
+    "streaming",
+    "livestream"
+  ],
+  "author": "Nils Citoleux <nils.citoleux@gmail.com> (https://github.com/citolen)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "ws": "^1.0.1"
+  }
+}
