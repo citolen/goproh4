@@ -108,6 +108,16 @@ cam.mode(GoPro.Settings.Modes.Video, GoPro.Settings.Submodes.Video.Video)
 });
 ```
 
+### Livestreaming from Web browser
+
+Requirements:
+- ffmpeg
+
+1. Go to [livestream](examples/livestream) directory
+2. `npm install`
+3. `node livestream.js` (make sure you are connected to your GoPro's wifi before launching this command)
+4. Open http://127.0.0.1:8082/index
+
 ### Settings
 
 All the camera settings can be found in [lib/constant.js](lib/constant.js).
@@ -161,6 +171,27 @@ cam.status(GoPro.Status.InternalBatteryLevel).then(function (status_value) {
 });
 ```
 
+## Documentation
+
+| Methods | Description |
+| ------- | ----------- |
+| [`Camera.status([id])`](#status) | Get all status from camera or status equals to id |
+| [`Camera.mode(mode [,submode])`](#mode) | Change GoPro's mode and optionally submode |
+| [`Camera.start()`](#record-a-video) | Start recording video/picture/timelapse/... |
+| [`Camera.stop()`](#record-a-video) | Stop recording video/timelapse |
+| `Camera.startStream()` | Send command to the Camera to start streaming & send a keepalive command every 2,5s |
+| `Camera.restartStream()` | Send command to the Camera to restart streaming & send a keepalive command every 2,5s |
+| `Camera.stopStream()` | Send command to the Camera to stop streaming & stop sending the keepalive command |
+| [`Camera.set(setting_id [,setting_value])`](#settings) | Set Camera setting to given value or optional get its value by not providing one |
+| `Camera.powerOn()` | Turn on the Camera using Wake-on-Lan, Camera's MAC address needs to be known |
+| `Camera.powerOff()` | Turn off the Camera |
+| `Camera.listMedia()` | Get list of all media in the Camera's storage |
+| `Camera.getMediaStream(directory, filename)` | Starts downloading media, sends back a stream |
+| `Camera.getMedia(directory, filename, path)` | Download media to file |
+| `Camera.deleteAll()` | Delete all media from Camera's storage |
+| `Camera.deleteLast()` | Delete last media from Camera's storage  |
+| `Camera.videoInfo(video_path)` | Get information about a video |
+
 ## Examples
 
-Go to [examples](examples) for more
+Go to [examples](examples)
