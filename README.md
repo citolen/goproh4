@@ -50,6 +50,7 @@ $ npm install goproh4
   * Get camera status
   * Get/Set camera settings
   * Take a picture, video, timelapse...
+  * View live video feed from within your browser
   * Turn ON/OFF the camera
   * List/retrieve information of the files on the camera
 
