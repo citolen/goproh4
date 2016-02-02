@@ -1,6 +1,6 @@
 {
     "name": "goproh4",
-    "version": "0.3.1",
+    "version": "0.4.0",
     "description": "API for controlling GoPro Hero 4 cameras",
     "directories": {
         "lib": "./lib"
