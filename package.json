@@ -41,6 +41,11 @@
             "name":"Adam Ludwinski",
             "email":"adam.ludwinski@meant4.com",
             "url":"https://github.com/ludwis"
+        },
+        {
+            "name":"Brownell Chalstrom",
+            "email":"brownell@chalstrom.com",
+            "url":"https://github.com/brownell"
         }
     ],
     "license": {
