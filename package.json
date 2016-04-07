@@ -36,6 +36,11 @@
             "name":"Jeff Gladchun",
             "email":"jeffgladchun@gmail.com",
             "url":"https://github.com/jgladch"
+        },
+        {
+            "name":"Brownell Chalstrom",
+            "email":"brownell@chalstrom.com",
+            "url":"https://github.com/brownell"
         }
     ],
     "license": {
