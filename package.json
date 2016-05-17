@@ -1,6 +1,6 @@
 {
     "name": "goproh4",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "description": "API for controlling GoPro Hero 4 cameras",
     "directories": {
         "lib": "./lib"
@@ -36,6 +36,11 @@
             "name":"Jeff Gladchun",
             "email":"jeffgladchun@gmail.com",
             "url":"https://github.com/jgladch"
+        },
+        {
+            "name":"Adam Ludwinski",
+            "email":"adam.ludwinski@meant4.com",
+            "url":"https://github.com/ludwis"
         }
     ],
     "license": {
