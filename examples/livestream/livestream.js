@@ -47,6 +47,7 @@ cam.restartStream().then(function () {
             'Stream Connected: ' + req.socket.remoteAddress +
             ':' + req.socket.remotePort + ' size: ' + width + 'x' + height
         );
+        req.socket.setTimeout(0);
         req.on('data', function(data){
             socketServer.broadcast(data, {binary:true});
         });
@@ -56,7 +57,8 @@ cam.restartStream().then(function () {
 
     app.listen(STREAM_PORT);
 
-    var ffmpeg = require('child_process').spawn("ffmpeg", [
+    var spawn_process = function () {
+        var ffmpeg = require('child_process').spawn("ffmpeg", [
 		"-f",
 		"mpegts",
 		"-i",
@@ -70,6 +72,11 @@ cam.restartStream().then(function () {
         "http://127.0.0.1:8082/publish"
 		]);
 
-    ffmpeg.stdout.pipe(process.stdout);
-    ffmpeg.stderr.pipe(process.stdout);
+        ffmpeg.stdout.pipe(process.stdout);
+        ffmpeg.stderr.pipe(process.stdout);
+        ffmpeg.on('exit', function () {
+            spawn_process(); 
+        });
+    };
+    spawn_process();
 });
