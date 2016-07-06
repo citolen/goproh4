@@ -22,30 +22,31 @@
         "4"
     ],
     "dependencies": {
-        "when": ">=3.5.1",
-        "request": ">=2.47.0"
+        "mac-address": "^0.3.0",
+        "request": ">=2.47.0",
+        "when": ">=3.5.1"
     },
     "author": "Nils Citoleux <nils.citoleux@gmail.com> (https://github.com/citolen)",
-    "contributors":[
+    "contributors": [
         {
-            "name":"Vladimir Seregin",
-            "email":"mail@peko.me",
-            "url":"https://github.com/peko"
+            "name": "Vladimir Seregin",
+            "email": "mail@peko.me",
+            "url": "https://github.com/peko"
         },
         {
-            "name":"Jeff Gladchun",
-            "email":"jeffgladchun@gmail.com",
-            "url":"https://github.com/jgladch"
+            "name": "Jeff Gladchun",
+            "email": "jeffgladchun@gmail.com",
+            "url": "https://github.com/jgladch"
         },
         {
-            "name":"Adam Ludwinski",
-            "email":"adam.ludwinski@meant4.com",
-            "url":"https://github.com/ludwis"
+            "name": "Adam Ludwinski",
+            "email": "adam.ludwinski@meant4.com",
+            "url": "https://github.com/ludwis"
         },
         {
-            "name":"Brownell Chalstrom",
-            "email":"brownell@chalstrom.com",
-            "url":"https://github.com/brownell"
+            "name": "Brownell Chalstrom",
+            "email": "brownell@chalstrom.com",
+            "url": "https://github.com/brownell"
         }
     ],
     "license": {
