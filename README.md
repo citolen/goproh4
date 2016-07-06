@@ -74,7 +74,7 @@ Options can be given:
 var cam = new GoPro.Camera({
     ip: '10.5.5.9' /* Gopro ip, should be 10.5.5.9 except in remote mode */,
     broadcastip: '10.5.5.255' /* Broadcast ip of the gopro network, use to wake up the gopro (WOL protocol), should be 10.5.5.255 */,
-    mac: '............' /* Mac address, used to wake up the gopro, should be set if the camera is off before launching the script, can be retrieve on the camera object cam._mac */
+    mac: 'xx:xx:xx:xx:xx:xx' /* Mac address, used to wake up the gopro, should be set if the camera is off before launching the script, available at cam._mac. Will be retrieved if not present. */
 });
 ```
 
@@ -176,6 +176,7 @@ cam.status(GoPro.Status.InternalBatteryLevel).then(function (status_value) {
 
 | Methods | Description |
 | ------- | ----------- |
+| `Camera.ready()` | Resolved when the camera mac address has been retrieved. see [example](examples/poweroffon.js) |
 | [`Camera.status([id])`](#status) | Get all status from camera or status equals to id |
 | [`Camera.mode(mode [,submode])`](#mode) | Change GoPro's mode and optionally submode |
 | [`Camera.start()`](#record-a-video) | Start recording video/picture/timelapse/... |
