@@ -141,16 +141,17 @@ Settings value are in camelcase:
 GoPro.Settings.VideoResolution.R1080S
 ```
 
-<br />
+
 `GoPro.Camera.set(setting_id, setting_value)`
+
 ```js
 cam.set(GoPro.Settings.VIDEO_RESOLUTION, GoPro.Settings.VideoResolution.R1080S).then(function () {
     console.log('[video resolution set to 1080p Superview]');
 });
 ```
 
-<br />
 `GoPro.Camera.set(setting_id)`
+
 ```js
 cam.set(GoPro.Settings.VIDEO_RESOLUTION).then(function (setting_value) {
     console.log('[video resolution is] = ', setting_value);
