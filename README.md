@@ -122,29 +122,36 @@ Requirements:
 ### Settings
 
 All the camera settings can be found in [lib/constant.js](lib/constant.js).
+
 Accessible through the object
+
 ```js
 GoPro.Settings
 ```
+
 Settings name are in capital letters:
+
 ```js
 GoPro.Settings.VIDEO_RESOLUTION
 ```
+
 Settings value are in camelcase:
+
 ```js
 GoPro.Settings.VideoResolution.R1080S
 ```
 
-<br />
+
 `GoPro.Camera.set(setting_id, setting_value)`
+
 ```js
 cam.set(GoPro.Settings.VIDEO_RESOLUTION, GoPro.Settings.VideoResolution.R1080S).then(function () {
     console.log('[video resolution set to 1080p Superview]');
 });
 ```
 
-<br />
 `GoPro.Camera.set(setting_id)`
+
 ```js
 cam.set(GoPro.Settings.VIDEO_RESOLUTION).then(function (setting_value) {
     console.log('[video resolution is] = ', setting_value);
